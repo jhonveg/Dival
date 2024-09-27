@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/profile",
+      "dest": "./index.js",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://academia-musical-diversidad.vercel.app",
+        "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
+        "Access-Control-Allow-Credentials": "true"
+      }
+    },
+    {
+      "src": "/api/courses",
+      "dest": "./index.js",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://academia-musical-diversidad.vercel.app",
+        "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
+        "Access-Control-Allow-Credentials": "true"
+      }
+    },
+    {
+      "src": "/api/logout",
+      "dest": "./index.js",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://academia-musical-diversidad.vercel.app",
+        "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
+        "Access-Control-Allow-Credentials": "true"
+      }
+    },
+    {
+      "src": "/api/register",
+      "dest": "./index.js",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://academia-musical-diversidad.vercel.app",
+        "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
+        "Access-Control-Allow-Credentials": "true"
+      }
+    },
+    {
+      "src": "/api/login",
+      "dest": "./index.js",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://academia-musical-diversidad.vercel.app",
+        "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
+        "Access-Control-Allow-Credentials": "true"
+      }
+    },
+    {
+
+      
+      "src": "/(.*)",
+      "dest": "./index.js"
+    }
+  ]
+}
